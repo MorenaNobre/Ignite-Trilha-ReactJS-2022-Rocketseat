@@ -1,8 +1,9 @@
 # Ignite - Trilha ReactJS 2022 - Rocketseat 🚀
 <br>
 <h3 align="center">
-    <img alt="Rocketseat Ignite Nova trilha 2022" src="logo-ignite.png" height="100px" />
+    <img alt="Rocketseat Ignite Nova trilha 2022" src="log-ignite.png" height="100px" />
 </h3>
+
 <br>
 <hr>
 <br>

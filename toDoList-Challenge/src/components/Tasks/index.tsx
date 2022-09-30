@@ -1,6 +1,7 @@
 import { ITask } from "../../App";
 import { Task } from "../Task";
 import styles from "./Tasks.module.css";
+import {TbClipboardText} from "react-icons/tb"
 
 interface Props {
   tasks: ITask[];
@@ -35,6 +36,14 @@ export function Tasks({ tasks, onDelete, onComplete }: Props) {
             onComplete={onComplete}
           />
         ))}
+
+        {tasks.length <= 0 && (
+          <section className={styles.empty}>
+            <TbClipboardText size={50}/>
+            <p>Você ainda não tem tarefas cadastradas</p>
+            <span>Crie tarefas e organize seus items a fazer</span>
+          </section>
+        )}
       </div>
     </section>
   );

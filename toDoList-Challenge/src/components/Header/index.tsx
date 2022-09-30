@@ -12,15 +12,22 @@ export function Header({ onAddTask }: Props) {
   const [title, setTitle] = useState("");
 
   function handleSubmit(event: FormEvent) {
-    event.preventDefault();
-
     onAddTask(title);
     setTitle("");
   }
 
   function handleOnChangeTitle(event: ChangeEvent<HTMLInputElement>) {
+    event.preventDefault();
+
+    event.target.setCustomValidity("");
     setTitle(event.target.value);
   }
+
+  function handleNewTaskInvalid(event: ChangeEvent<HTMLInputElement>) {
+    event.target.setCustomValidity("Esse campo é obrigatório!");
+  }
+
+  const isNewTaskEmpty = title.length === 0
 
   return (
     <header className={styles.header}>
@@ -28,12 +35,14 @@ export function Header({ onAddTask }: Props) {
 
       <form className={styles.newTaskForm} onSubmit={handleSubmit}>
         <input
+          name="task"
           placeholder="Adicione uma nova tarefa"
-          onChange={handleOnChangeTitle}
           value={title}
+          onChange={handleOnChangeTitle}
+          onInvalid={handleNewTaskInvalid}
           required
         />
-        <button>
+        <button disabled={isNewTaskEmpty}>
           Criar
           <AiOutlinePlusCircle size={20} />
         </button>

@@ -33,6 +33,11 @@
   color: var(--gray-300);
 }
 
+.newTaskForm input:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
 .newTaskForm button {
   height: 100%;
   padding: 0 1rem;
@@ -45,4 +50,13 @@
   gap: 0.375rem;
   font-weight: 700;
   font-size: 0.875rem;
+}
+
+.newTaskForm button:not(:disabled):hover {
+  background: var(--blue-dark);
+}
+
+.newTaskForm button:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
 }

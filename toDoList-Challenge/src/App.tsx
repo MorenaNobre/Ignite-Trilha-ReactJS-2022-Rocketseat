@@ -1,6 +1,6 @@
-import { useState } from "react"
-import { Header } from "./components/Header"
-import { Tasks } from "./components/Tasks"
+import { useState } from "react";
+import { Header } from "./components/Header";
+import { Tasks } from "./components/Tasks";
 
 export interface ITask {
   id: string;
@@ -19,8 +19,8 @@ function App() {
       id: "2",
       title: "Essa é outra task",
       isCompleted: false,
-    }
-  ])
+    },
+  ]);
 
   function addTask(taskTitle: string) {
     setTasks([
@@ -29,16 +29,21 @@ function App() {
         id: crypto.randomUUID(),
         title: taskTitle,
         isCompleted: false,
-      }
-    ])
+      },
+    ]);
+  }
+
+  function deleteTaskById(taskId: string) {
+    const newTasks = tasks.filter((task) => task.id !== taskId);
+    setTasks(newTasks);
   }
 
   return (
     <>
-      <Header onAddTask={addTask}/>
-      <Tasks tasks={tasks}/>
+      <Header onAddTask={addTask} />
+      <Tasks tasks={tasks} onDelete={deleteTaskById}/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

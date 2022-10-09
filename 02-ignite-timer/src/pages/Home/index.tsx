@@ -21,9 +21,22 @@ const newCycleFormValidationSchema = zod.object({
     .max(60, "O ciclo precisa ser de no máximo 60 minutos."),
 });
 
+// interface NewCycleFormData {
+//   task: string;
+//   minutesAmount: number;
+// }
+
+// usar o type quando vai criar um tipo baseado em outra ref/ variável.
+
+type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>;
+
 export function Home() {
-  const { register, handleSubmit, watch } = useForm({
+  const { register, handleSubmit, watch } = useForm<NewCycleFormData>({
     resolver: zodResolver(newCycleFormValidationSchema),
+    defaultValues: {
+      task: "",
+      minutesAmount: 0,
+    },
   });
 
   function handleCreateNewCycle(data: any) {

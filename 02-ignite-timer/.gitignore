@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 
 notas.tsx
+Context-explicacao.tsx

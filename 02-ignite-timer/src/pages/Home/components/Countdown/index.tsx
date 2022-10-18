@@ -65,6 +65,8 @@ export function Countdown() {
   useEffect(() => {
     if (activeCycle) {
       document.title = `${minutes}:${seconds}`;
+    } else {
+      document.title = "Ignite - Pomodoro Timer";
     }
   }, [minutes, seconds, activeCycle]);
 

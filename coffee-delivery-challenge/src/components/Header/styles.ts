@@ -42,8 +42,9 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
   position: relative;
   cursor: inherit;
   font-size: ${({ theme }) => theme.textSizes["text-regular-s"]};
-  ${({ variant }) => css`
-    background: ${({ theme }) => theme.colors[`brand-${variant}-light`]};
-    color: ${({ theme }) => theme.colors[`brand-${variant}-dark`]};
+
+  ${({variant, theme}) => css`
+    background: ${theme.colors[`brand-${variant}-light`]};
+    color: ${theme.colors[`brand-${variant}-dark`]}
   `}
 `;

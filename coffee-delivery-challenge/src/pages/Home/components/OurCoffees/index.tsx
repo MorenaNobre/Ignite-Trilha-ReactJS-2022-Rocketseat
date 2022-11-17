@@ -1,8 +1,14 @@
+import { TitleText } from "../../../../components/Typography";
+import { OurCoffeesContainer } from "./styles";
+
 export function OurCoffees() {
   return (
     <>
-      <h1>Our Coffees</h1>
-      <h1>Our Coffees</h1>
+      <OurCoffeesContainer className="container">
+        <TitleText size="l" color="subtitle">
+          Nossos cafés
+        </TitleText>
+      </OurCoffeesContainer>
     </>
   );
 }

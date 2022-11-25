@@ -60,7 +60,7 @@ export const CardFooter = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   > div {
     display: flex;
@@ -74,6 +74,7 @@ export const CardFooter = styled.div`
 `
 
 export const AddCartWrapper = styled.div`
+  display: flex;
   width: 7.5rem;
 
   > button {

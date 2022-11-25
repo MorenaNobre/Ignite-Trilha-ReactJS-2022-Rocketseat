@@ -32,14 +32,13 @@ export function CoffeeCard() {
           <TitleText size="m" color="text" as="strong">
             9,90
           </TitleText>
-
-          <AddCartWrapper>
-            <QuantityInput />
-            <button>
-              <ShoppingCart weight="fill" size={22} />
-            </button>
-          </AddCartWrapper>
         </div>
+        <AddCartWrapper>
+          <QuantityInput />
+          <button>
+            <ShoppingCart weight="fill" size={22} />
+          </button>
+        </AddCartWrapper>
       </CardFooter>
     </CoffeeCardContainer>
   );

@@ -1,5 +1,5 @@
 import { TitleText } from "../../../../components/Typography";
-import { CompleteOrderFormContainer } from "./styles";
+import { CompleteOrderFormContainer, FormSectionContainer } from "./styles";
 
 export function CompleteOrderForm() {
   return (
@@ -7,6 +7,8 @@ export function CompleteOrderForm() {
       <TitleText size="xs" color="subtitle">
         Complete seu pedido
       </TitleText>
+
+      <FormSectionContainer></FormSectionContainer>
     </CompleteOrderFormContainer>
   );
 }

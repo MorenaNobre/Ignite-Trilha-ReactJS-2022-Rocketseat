@@ -11,7 +11,7 @@ export function CoffeeCartCard() {
   return (
     <CoffeeCartCardContainer>
       <div>
-        <img src="https://s3-alpha-sig.figma.com/img/55b1/f9ee/64600f98b2bae456b96fdc624c4b4f47?Expires=1671408000&Signature=OITyy7t3gYtqAxRZTMwMEKzysm2Dnbx1C1zX6-ABIZrXpFj~M9WtsGFpMlcq5YsHyFACVMG~d9fhL3BXOzDFZRD6FpvWHtNoYIgTT2BWiKfpyaX8bl0VK5gYd5FeGCmskVolhOJNifXMFTNJ4riiPAMSiwXYwCMpiC0UujgPMxaUysGupzH1Adps8pJiJ~tqUbDJVuH2j~TF8BWnYTOfVadWyu3mfD72FQKbEbjnDECv35A-jlPlbWgyfwCXSIz1RBj7RLKeVRlQJ-dOzhA~rUB9Vb430aH1VXSFRnUIbciAAN8BuPzkDQAaMtjL68FQpTmh9zodzdja4JTb47Qxng__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
+        <img src="https://s3-alpha-sig.figma.com/img/0a3c/9586/9a75d3fa0ffdecc4bc46ca83d2342e1c?Expires=1674432000&Signature=NagC0aILVrr~dJ-Ehp2yMBfJ9DzUhmif52~cj153j6ihTcS3pDd~DnYMSlfEbMaLqp4m2aCeutxksmkEFah0iQN~RsuD-Rn9uyXMgOda15WGZioNlX0PhAOAys4n2bFBrudYE46tl66~6ayH1efgud9cES13Z6iw8HpZXbGG9s7tNhQfCQOav72ClcdYPrGREW6zgxk57fMsU~ZEuMezw3KYmAtPDllYtKXE7F5fTD-BfC59Xc0mVDJMBioM4-ehfGP379eYwju3Fx50TnWBnFgUEY4wjIXzuweUuJtLbtK-oMyisuUjvEiDMWFlMcuX3do8riOssRty8wDrfkgSGQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
 
         <div>
           <RegularText color="subtitle">Expresso Tradicional</RegularText>

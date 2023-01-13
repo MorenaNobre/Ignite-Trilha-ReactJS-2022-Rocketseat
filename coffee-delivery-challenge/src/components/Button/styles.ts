@@ -19,6 +19,6 @@ export const ButtonContainer = styled.button`
   }
 
   &:not(.disabled):hover {
-    background: ${({ theme }) => theme.colors["brand-purple-dark"]};
+    background: ${({ theme }) => theme.colors["brand-yellow-dark"]};
   }
 `

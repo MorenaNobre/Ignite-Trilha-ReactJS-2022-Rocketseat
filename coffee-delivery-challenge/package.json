@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "esbuild": "^0.17.8",
+    "immer": "^9.0.19",
     "phosphor-react": "^1.4.1",
     "polished": "^4.2.2",
     "react": "^18.2.0",

@@ -14,6 +14,7 @@ interface CartContextType {
     cartItemId: number,
     type: "increase" | "decrease"
   ) => void;
+  removeCartItem: (cartItemId: number) => void;
 }
 
 interface CartContextProviderProps {
@@ -37,6 +38,20 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
         draft.push(coffee);
       } else {
         draft[coffeeAlreadyExistsInCart].quantity += coffee.quantity;
+      }
+    });
+
+    setCartItems(newCart);
+  }
+
+  function removeCartItem(cartItemId: number) {
+    const newCart = produce(cartItems, (draft) => {
+      const coffeeExistsInCart = cartItems.findIndex(
+        (cartItem) => cartItem.id === cartItemId
+      );
+
+      if (coffeeExistsInCart >= 0) {
+        draft.splice(coffeeExistsInCart, 1);
       }
     });
 
@@ -69,6 +84,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
         cartQuantity,
         addCoffeeToCart,
         changeCartItemQuantity,
+        removeCartItem,
       }}
     >
       {children}

@@ -6,17 +6,43 @@ import {
   RemoveButton,
 } from "./styles";
 import { Trash } from "phosphor-react";
+import { CartItem } from "../../../../contexts/CartContext";
+import { formatMoney } from "../../../../utils/formatMoney";
+import { useCart } from "../../../../hooks/useCart";
 
-export function CoffeeCartCard() {
+interface CoffeeCartCardProps {
+  coffee: CartItem;
+}
+
+export function CoffeeCartCard({ coffee }: CoffeeCartCardProps) {
+  const { changeCartItemQuantity } = useCart();
+
+  function handleIncrease() {
+    changeCartItemQuantity(coffee.id, "increase");
+  }
+
+  function handleDecrease() {
+    changeCartItemQuantity(coffee.id, "decrease");
+  }
+
+  const coffeeTotal = coffee.price * coffee.quantity;
+
+  const formattedPrice = formatMoney(coffeeTotal);
+
   return (
     <CoffeeCartCardContainer>
       <div>
-        <img src="https://s3-alpha-sig.figma.com/img/0a3c/9586/9a75d3fa0ffdecc4bc46ca83d2342e1c?Expires=1674432000&Signature=NagC0aILVrr~dJ-Ehp2yMBfJ9DzUhmif52~cj153j6ihTcS3pDd~DnYMSlfEbMaLqp4m2aCeutxksmkEFah0iQN~RsuD-Rn9uyXMgOda15WGZioNlX0PhAOAys4n2bFBrudYE46tl66~6ayH1efgud9cES13Z6iw8HpZXbGG9s7tNhQfCQOav72ClcdYPrGREW6zgxk57fMsU~ZEuMezw3KYmAtPDllYtKXE7F5fTD-BfC59Xc0mVDJMBioM4-ehfGP379eYwju3Fx50TnWBnFgUEY4wjIXzuweUuJtLbtK-oMyisuUjvEiDMWFlMcuX3do8riOssRty8wDrfkgSGQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
+        <img src={`/coffees/${coffee.photo}`} />
 
         <div>
-          <RegularText color="subtitle">Expresso Tradicional</RegularText>
+          <RegularText color="subtitle">{coffee.name}</RegularText>
           <ActionsContainer>
-            <QuantityInput size="small" />
+            <QuantityInput
+              size="small"
+              onIncrease={handleIncrease}
+              onDecrease={handleDecrease}
+              quantity={coffee.quantity}
+            />
             <RemoveButton>
               <Trash size={16} />
               REMOVER
@@ -25,7 +51,7 @@ export function CoffeeCartCard() {
         </div>
       </div>
 
-      <p>R$ 9,90</p>
+      <p>R$ {formattedPrice}</p>
     </CoffeeCartCardContainer>
   );
 }

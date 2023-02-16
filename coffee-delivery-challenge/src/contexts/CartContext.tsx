@@ -110,5 +110,3 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     </CartContext.Provider>
   );
 }
-
-// parei 3:13:12

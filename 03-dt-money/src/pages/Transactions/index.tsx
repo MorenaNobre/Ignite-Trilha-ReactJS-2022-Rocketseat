@@ -1,5 +1,5 @@
 import { Header } from "../../components/Header";
-import { SearchForm } from "../../components/SearchForm";
+import { SearchForm } from "./SearchForm";
 import { Summary } from "../../components/Summary";
 import {
   PriceHighlight,

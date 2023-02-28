@@ -1,0 +1,20 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Desenvolvimento de site",
+      "type": "income",
+      "category": "Venda",
+      "price": 14000,
+      "createdAt": "Tue, 28 Feb 2023 13:38:03 GMT"
+    },
+    {
+      "id": 2,
+      "description": "Pagamento aluguel",
+      "type": "outcome",
+      "category": "Pagamento",
+      "price": 2500,
+      "createdAt": "Tue, 28 Feb 2023 13:45:03 GMT"
+    }
+  ]
+}

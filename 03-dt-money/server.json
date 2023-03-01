@@ -5,7 +5,7 @@
       "description": "Desenvolvimento de site",
       "type": "income",
       "category": "Venda",
-      "price": 14000,
+      "price": 24000,
       "createdAt": "Tue, 28 Feb 2023 13:38:03 GMT"
     },
     {
@@ -15,6 +15,14 @@
       "category": "Pagamento",
       "price": 2500,
       "createdAt": "Tue, 28 Feb 2023 13:45:03 GMT"
+    },
+    {
+      "id": 3,
+      "description": "X-Burguer",
+      "type": "outcome",
+      "category": "Alimento",
+      "price": 60,
+      "createdAt": "Wed, 01 Mar 2023 13:45:03 GMT"
     }
   ]
 }

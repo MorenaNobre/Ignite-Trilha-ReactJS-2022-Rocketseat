@@ -23,6 +23,30 @@
       "category": "Alimento",
       "price": 60,
       "createdAt": "Wed, 01 Mar 2023 13:45:03 GMT"
+    },
+    {
+      "description": "Ilustracão Peaky Blinders",
+      "price": 300,
+      "category": "Freela de ilustra",
+      "type": "income",
+      "createdAt": "2023-03-03T14:43:17.830Z",
+      "id": 4
+    },
+    {
+      "description": "Notebook",
+      "price": 5941,
+      "category": "Investimento",
+      "type": "outcome",
+      "createdAt": "2023-03-03T14:55:01.177Z",
+      "id": 5
+    },
+    {
+      "description": "Palma de Banana",
+      "price": 100,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2023-03-03T16:06:46.297Z",
+      "id": 6
     }
   ]
 }
